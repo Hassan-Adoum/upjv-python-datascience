@@ -1,1 +1,13 @@
-
+# @title 🔧 Exercice — Créer la branche dev_td03 et protéger main
+# ================================================================
+#  EXERCICE — Préparer votre dépôt pour le TD03             [ 2 étapes ]
+# ================================================================
+#
+# Référez-vous à l'infographie ci-dessus pour réaliser :
+#   • Étape 1/2 — Créer la branche dev_td03
+#   • Étape 2/2 — Protéger la branche main (1 reviewer obligatoire)
+#
+# ----------------------------------------------------------------
+# Une fois les deux étapes effectuées, confirmez ici
+# ----------------------------------------------------------------
+tout_configure = True
