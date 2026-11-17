@@ -1,0 +1,39 @@
+Question 1 
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Charger les données
+netflix_df = pd.read_csv("netflix_data.csv")
+
+# Sélectionner les films des années 1990
+movies_90s = netflix_df[
+    (netflix_df["type"] == "Movie") &
+    (netflix_df["release_year"].between(1990, 1999))
+]
+
+# Tracer l'histogramme
+plt.hist(movies_90s["duration"], bins=20)
+plt.xlabel("Durée (minutes)")
+plt.ylabel("Nombre de films")
+plt.title("Durée des films Netflix des années 1990")
+plt.show()
+
+# Durée la plus fréquente (approximative)
+duration = 100
+ Question 2
+# Films uniquement, sortis de 1990 à 1999 inclus
+movies_90s = netflix_df[
+    (netflix_df["type"] == "Movie") &
+    (netflix_df["release_year"] >= 1990) &
+    (netflix_df["release_year"] <= 1999)
+]
+
+# Films d'action de moins de 90 minutes (strictement)
+short_movie_count = len(
+    movies_90s[
+        (movies_90s["genre"] == "Action") &
+        (movies_90s["duration"] < 90)
+    ]
+)
+
+print(short_movie_count)
